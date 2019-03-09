@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:with="http://www.thymeleaf.org/extras/with"
+      layout:decorate="~{layout}"
+      with:title="Edit">
+<th:block layout:fragment="content">
+    <div class="row">
+        <div class="col-md-6">
+
+            <th:block th:fragment="form">
+                <form th:action="@{|/ciudades/${ciudad.id}|}" th:object="${ciudad}" method="post">
+                    <div class="form-group">
+                        <label class="control-label" th:for="nombre">Nombre</label>
+                        <input class="form-control" th:field="*{nombre}" type="text"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" th:for="fundadaEn">Fundada en</label>
+                        <input class="form-control" th:field="*{fundadaEn}" type="number" step="1"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" th:for="poblacion">Población</label>
+                        <input class="form-control" th:field="*{poblacion}" type="number" step="1" min="0"/>
+                    </div>
+                    <div class="form-group submit-cancel">
+                        <input class="btn btn-primary" type="submit" value="Guardar cambios"/>
+                        <a class="btn btn-default btn-cancel" th:href="@{/ciudades}">Cancelar</a>
+                    </div>
+                </form>
+            </th:block>
+        </div>
+    </div>
+</th:block>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:with="http://www.thymeleaf.org/extras/with"
+      layout:decorate="~{layout}"
+      with:title="Ciudades">
+<th:block layout:fragment="content">
+    <table class="table table-striped table-bordered" id="ciudades">
+        <thead>
+        <tr>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Fundada en</th>
+            <th scope="col">Población</th>
+            <th scope="col">Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="ciudad : ${ciudades}" th:id="|ciudad_${ciudad.id}|">
+        
+            <th scope="row">
+                <span id="nombre" data-type="text" data-title="Nombre"
+                      th:attr="data-url=@{/ciudades}, data-pk=${ciudad.id}, data-value=${ciudad.nombre}"
+                      class="inline-editable"
+                      th:text="${ciudad.nombre}">Nombre ciudad</span>
+            </th>
+            <td class="text-right">
+                <span id="fundadaEn" data-type="number" data-title="Fundada en"
+                      th:attr="data-url=@{/ciudades}, data-pk=${ciudad.id}, data-value=${ciudad.fundadaEn}"
+                      data-clear="false"
+                      class="inline-editable"
+                      th:text="${ciudad.fundadaEn} lt 0 ? ${(ciudad.fundadaEn * -1) + ' BC'}: ${ciudad.fundadaEn + ' AD'}">Fundada en</span>
+            </td>
+            <td class="text-right">
+                <span id="poblacion" data-type="number" data-title="Poblacion"
+                      th:attr="data-url=@{/ciudades}, data-pk=${ciudad.id}, data-value=${ciudad.poblacion}"
+                      data-clear="false"
+                      class="inline-editable"
+                      th:text="${#numbers.formatInteger(ciudad.poblacion, 1, 'DEFAULT')}">Población</span>
+            </td>
+            <td>
+                <a th:href="@{|/ciudades/${ciudad.id}|}"
+                   th:attr="aria-label=${'Edit ' + ciudad.nombre}" class="city-link">Editar</a>
+                <a th:href="@{|/ciudades/${ciudad.id}/delete|}"
+                   th:attr="aria-label=${'Delete ' + ciudad.nombre}" class="city-link">Borrar</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</th:block>
+<th:block layout:fragment="body_end">
+    <div class="modal fade" tabindex="-1" role="dialog" id="cityModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Editar ciudad</h4>
+                </div>
+                <div class="modal-body">
+                    <p>....</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>
+</html>

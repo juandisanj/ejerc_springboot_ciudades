@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:with="http://www.thymeleaf.org/extras/with"
+      layout:decorate="~{layout}"
+      with:title="'Hola'">
+<th:block layout:fragment="content">
+    <p>Ejemplo para usar thymeleaf con ciudades</p>
+
+    <p><a th:href="@{/ciudades}" href="ciudades.html">Ver ciudades</a></p>
+</th:block>
+</html>
