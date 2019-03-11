@@ -15,6 +15,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import es.curso.java.thymeleaf.config.ProjectProperties;
+import es.curso.java.thymeleaf.dao.CiudadDao;
+import es.curso.java.thymeleaf.entity.Ciudad;
 
 @Configuration
 @EnableConfigurationProperties(ProjectProperties.class)

@@ -10,8 +10,8 @@ import java.util.Optional;
 import org.junit.Before;
 import org.junit.Test;
 
-import es.curso.java.thymeleaf.Ciudad;
-import es.curso.java.thymeleaf.CiudadDao;
+import es.curso.java.thymeleaf.dao.CiudadDao;
+import es.curso.java.thymeleaf.entity.Ciudad;
 
 @SuppressWarnings("OptionalGetWithoutIsPresent")
 public class CityDaoTest {

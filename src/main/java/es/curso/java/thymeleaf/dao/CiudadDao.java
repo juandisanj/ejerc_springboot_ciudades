@@ -1,6 +1,6 @@
 
 
-package es.curso.java.thymeleaf;
+package es.curso.java.thymeleaf.dao;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -11,6 +11,8 @@ import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Repository;
+
+import es.curso.java.thymeleaf.entity.Ciudad;
 
 @Repository
 public class CiudadDao {

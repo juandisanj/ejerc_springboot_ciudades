@@ -1,5 +1,5 @@
 
-package es.curso.java.thymeleaf;
+package es.curso.java.thymeleaf.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController {
 
-  static final String VIEW_INDEX = "pages/index";
+  public static final String VIEW_INDEX = "pages/index";
 
   @RequestMapping(value = "")
   public String getHome() {

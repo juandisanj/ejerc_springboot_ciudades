@@ -1,6 +1,6 @@
 
 
-package es.curso.java.thymeleaf;
+package es.curso.java.thymeleaf.entity;
 
 import java.io.Serializable;
 

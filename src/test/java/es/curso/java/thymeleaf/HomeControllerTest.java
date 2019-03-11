@@ -1,12 +1,12 @@
 package es.curso.java.thymeleaf;
 
-import static es.curso.java.thymeleaf.HomeController.VIEW_INDEX;
+import static es.curso.java.thymeleaf.controller.HomeController.VIEW_INDEX;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import es.curso.java.thymeleaf.HomeController;
+import es.curso.java.thymeleaf.controller.HomeController;
 
 public class HomeControllerTest {
 

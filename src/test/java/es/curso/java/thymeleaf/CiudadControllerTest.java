@@ -2,13 +2,13 @@
 
 package es.curso.java.thymeleaf;
 
-import static es.curso.java.thymeleaf.CiudadController.FRAGMENT_FORM;
-import static es.curso.java.thymeleaf.CiudadController.MODEL_ATTRIBUTE_CITIES;
-import static es.curso.java.thymeleaf.CiudadController.MODEL_ATTRIBUTE_CITY;
-import static es.curso.java.thymeleaf.CiudadController.SECTION_CITIES;
-import static es.curso.java.thymeleaf.CiudadController.VIEW_CITIES;
-import static es.curso.java.thymeleaf.CiudadController.VIEW_CITY_DELETE;
-import static es.curso.java.thymeleaf.CiudadController.VIEW_CITY_FORM;
+import static es.curso.java.thymeleaf.controller.CiudadController.FRAGMENT_FORM;
+import static es.curso.java.thymeleaf.controller.CiudadController.MODEL_ATTRIBUTE_CITIES;
+import static es.curso.java.thymeleaf.controller.CiudadController.MODEL_ATTRIBUTE_CITY;
+import static es.curso.java.thymeleaf.controller.CiudadController.SECTION_CITIES;
+import static es.curso.java.thymeleaf.controller.CiudadController.VIEW_CITIES;
+import static es.curso.java.thymeleaf.controller.CiudadController.VIEW_CITY_DELETE;
+import static es.curso.java.thymeleaf.controller.CiudadController.VIEW_CITY_FORM;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
@@ -27,9 +27,9 @@ import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.servlet.view.RedirectView;
 
-import es.curso.java.thymeleaf.Ciudad;
-import es.curso.java.thymeleaf.CiudadController;
-import es.curso.java.thymeleaf.CiudadDao;
+import es.curso.java.thymeleaf.controller.CiudadController;
+import es.curso.java.thymeleaf.dao.CiudadDao;
+import es.curso.java.thymeleaf.entity.Ciudad;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CiudadControllerTest {

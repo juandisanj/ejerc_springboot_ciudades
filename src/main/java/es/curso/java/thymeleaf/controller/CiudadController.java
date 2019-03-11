@@ -1,5 +1,5 @@
 
-package es.curso.java.thymeleaf;
+package es.curso.java.thymeleaf.controller;
 
 import static org.springframework.http.HttpStatus.NO_CONTENT;
 
@@ -22,17 +22,20 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.servlet.view.RedirectView;
 
+import es.curso.java.thymeleaf.dao.CiudadDao;
+import es.curso.java.thymeleaf.entity.Ciudad;
+
 @Controller
 @RequestMapping("ciudades")
 public class CiudadController {
 
-  static final String VIEW_CITIES = "pages/ciudades";
-  static final String VIEW_CITY_FORM = "pages/ciudades-form";
-  static final String VIEW_CITY_DELETE = "pages/ciudad-delete";
-  static final String MODEL_ATTRIBUTE_CITIES = "ciudades";
-  static final String MODEL_ATTRIBUTE_CITY = "ciudad";
-  static final String FRAGMENT_FORM = " :: form";
-  static final String SECTION_CITIES = "ciudades";
+  public static final String VIEW_CITIES = "pages/ciudades";
+  public static final String VIEW_CITY_FORM = "pages/ciudades-form";
+  public static final String VIEW_CITY_DELETE = "pages/ciudad-delete";
+  public static final String MODEL_ATTRIBUTE_CITIES = "ciudades";
+  public static final String MODEL_ATTRIBUTE_CITY = "ciudad";
+  public static final String FRAGMENT_FORM = " :: form";
+  public static final String SECTION_CITIES = "ciudades";
   private static final Logger LOG = LoggerFactory.getLogger(CiudadController.class);
   private static final String ID = "id";
   private static final String PATH_ID = "/{id}";

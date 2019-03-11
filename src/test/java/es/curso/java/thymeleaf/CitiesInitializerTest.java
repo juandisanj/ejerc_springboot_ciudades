@@ -15,8 +15,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import es.curso.java.thymeleaf.Application;
-import es.curso.java.thymeleaf.Ciudad;
-import es.curso.java.thymeleaf.CiudadDao;
+import es.curso.java.thymeleaf.dao.CiudadDao;
+import es.curso.java.thymeleaf.entity.Ciudad;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = Application.class)
